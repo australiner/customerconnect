@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign in — Family Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <main class="screen">
+    <div class="brand">Family Portal</div>
+    <div class="auth-card">
+      <div class="tab-toggle">
+        <button id="tab-signin" type="button" class="active">Sign in</button>
+        <button id="tab-signup" type="button">Create account</button>
+      </div>
+
+      <h1 id="form-title">Sign in</h1>
+      <p class="sub">View your student's enrollment details and assigned school service.</p>
+
+      <form id="auth-form">
+        <div class="field-group">
+          <label for="email">Email</label>
+          <input id="email" type="email" required autocomplete="email" />
+        </div>
+        <div class="field-group">
+          <label for="password">Password</label>
+          <input id="password" type="password" required minlength="8" autocomplete="current-password" />
+        </div>
+        <button class="signin-button" type="submit" id="submit-button">Sign in</button>
+        <p class="error-text" id="error-text"></p>
+      </form>
+
+      <div class="divider">or</div>
+
+      <a class="google-button" href="/api/auth/google">Continue with Google</a>
+    </div>
+  </main>
+
+  <script src="/js/auth.js"></script>
+</body>
+</html>

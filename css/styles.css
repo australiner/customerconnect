@@ -1,0 +1,318 @@
+:root {
+  --ink: #182b45;
+  --slate: #45607e;
+  --paper: #edf0f4;
+  --card: #ffffff;
+  --gold: #c68a2e;
+  --error: #b3261e;
+  --hairline: #d2d7dd;
+  --text-muted: #5b6878;
+
+  --font-display: "Fraunces", serif;
+  --font-body: "Inter", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--font-body);
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+.screen {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.brand {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  margin-bottom: 36px;
+}
+
+/* ---------- auth card ---------- */
+.auth-card {
+  background: var(--card);
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  padding: 36px 36px 32px;
+  width: 100%;
+  max-width: 380px;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(24, 43, 69, 0.04);
+}
+
+.auth-card h1 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 8px;
+}
+
+.auth-card p.sub {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  margin: 0 0 24px;
+}
+
+.tab-toggle {
+  display: flex;
+  margin-bottom: 24px;
+  border: 1px solid var(--hairline);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.tab-toggle button {
+  flex: 1;
+  padding: 10px;
+  background: var(--card);
+  border: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.tab-toggle button.active {
+  background: var(--ink);
+  color: #fff;
+}
+
+.field-group {
+  margin-bottom: 16px;
+  text-align: left;
+}
+
+label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--slate);
+  display: block;
+  margin-bottom: 6px;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--hairline);
+  border-radius: 3px;
+  font-size: 0.95rem;
+  font-family: var(--font-body);
+}
+
+input:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 1px;
+  border-color: var(--gold);
+}
+
+.signin-button {
+  width: 100%;
+  padding: 13px 16px;
+  background: var(--ink);
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.signin-button:hover {
+  background: #233c61;
+}
+
+.signin-button:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.signin-button:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 22px 0;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+}
+
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--hairline);
+}
+
+.google-button {
+  width: 100%;
+  padding: 12px 16px;
+  background: #fff;
+  border: 1px solid var(--hairline);
+  border-radius: 3px;
+  font-size: 0.92rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: block;
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.google-button:hover {
+  background: #f7f7f7;
+}
+
+.error-text {
+  color: var(--error);
+  font-size: 0.85rem;
+  margin-top: 10px;
+  min-height: 1em;
+}
+
+/* ---------- record card (signature element) ---------- */
+.record-card {
+  background: var(--card);
+  border: 1px solid var(--hairline);
+  border-radius: 4px;
+  width: 100%;
+  max-width: 460px;
+  overflow: hidden;
+  box-shadow: 0 1px 2px rgba(24, 43, 69, 0.04);
+}
+
+.record-tab {
+  background: var(--ink);
+  color: #fff;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 9px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.record-tab .verified {
+  color: var(--gold);
+  font-weight: 600;
+}
+
+.record-body {
+  padding: 28px 28px 24px;
+}
+
+.record-body h1 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0 0 22px;
+}
+
+.record-field {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 12px;
+  padding: 13px 0;
+  border-top: 1px solid var(--hairline);
+  align-items: baseline;
+}
+
+.record-field:first-of-type {
+  border-top: none;
+}
+
+.record-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--slate);
+}
+
+.record-value {
+  font-size: 0.98rem;
+  color: var(--ink);
+}
+
+.record-value a {
+  color: var(--gold);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.record-value a:hover {
+  text-decoration: underline;
+}
+
+.record-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 26px;
+  padding-top: 16px;
+  border-top: 1px solid var(--hairline);
+}
+
+.sign-out {
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.sign-out:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.empty-state {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+.loading {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
+}

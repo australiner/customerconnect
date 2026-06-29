@@ -1,0 +1,19 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "FUNCTIONS_WORKER_RUNTIME": "node",
+
+    "AZURE_SQL_SERVER": "yourserver.database.windows.net",
+    "AZURE_SQL_DATABASE": "yourdb",
+    "AZURE_SQL_USER": "",
+    "AZURE_SQL_PASSWORD": "",
+
+    "JWT_SECRET": "",
+
+    "GOOGLE_CLIENT_ID": "",
+    "GOOGLE_CLIENT_SECRET": "",
+    "GOOGLE_REDIRECT_URI": "http://localhost:4280/api/auth/google/callback",
+
+    "COOKIE_SECURE": "false"
+  }
+}
